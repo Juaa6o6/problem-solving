@@ -26,3 +26,14 @@
 
  <p>첫째 줄에 A+B를 출력한다.</p>
 
+---
+
+### 제출
+```python
+i = input() #str
+i = i.split(' ')
+ii = int(i[0]) + int(i[1])
+print(ii)
+```
+
+### 
