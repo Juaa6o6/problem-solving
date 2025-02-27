@@ -96,12 +96,7 @@ for i in [A+B, A-B, A*B, A//B, A%B]:
 ```python
 import sys
 
-a, b = map(int, sys.stdin.readline().split())
-sys.stdout.write(
-    f'{a + b}\n'
-    f'{a - b}\n'
-    f'{a * b}\n'
-    f'{a // b}\n'
-    f'{a % b}\n'
+a, b = map(int, sys.stdin.read().split())
+print(a + b, a - b, a * b, a // b, a % b, sep='\n')
 )
 ```
