@@ -58,6 +58,6 @@ else :
 ### 다른 답
 
 ```python
-import sys
-sys.stdout.write('FFFFFFDCBAA'[int(sys.stdin.readline())//10])
+print('FFFFFFDCBAA'[int(input())//10])
+# 인덱스로 반환
 ```
