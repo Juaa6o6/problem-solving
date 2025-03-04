@@ -1,6 +1,6 @@
-# [Bronze V] A/B - 1008 
+# [Bronze V] A/B - 1008
 
-[문제 링크](https://www.acmicpc.net/problem/1008) 
+[문제 링크](https://www.acmicpc.net/problem/1008)
 
 ### 성능 요약
 
@@ -18,24 +18,27 @@
 
 <p>두 정수 A와 B를 입력받은 다음, A/B를 출력하는 프로그램을 작성하시오.</p>
 
-### 입력 
+### 입력
 
  <p>첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)</p>
 
-### 출력 
+### 출력
 
  <p>첫째 줄에 A/B를 출력한다. 실제 정답과 출력값의 절대오차 또는 상대오차가 10<sup>-9</sup> 이하이면 정답이다.</p>
 
 ---
 
 ### 사용 언어
-* python 3
+
+- python 3
 
 ### 제출
+
 ```python
 a, b = map(int, input().split())
 print(a/b)
 ```
 
 ### 배운 내용
-- [A+B 와 동일](https://github.com/Juaa6o6/problem-solving/tree/main/%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)
+
+- [A+B](https://github.com/Juaa6o6/problem-solving/tree/main/%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)

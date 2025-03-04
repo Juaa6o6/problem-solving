@@ -1,6 +1,6 @@
-# [Bronze V] A-B - 1001 
+# [Bronze V] A-B - 1001
 
-[문제 링크](https://www.acmicpc.net/problem/1001) 
+[문제 링크](https://www.acmicpc.net/problem/1001)
 
 ### 성능 요약
 
@@ -18,24 +18,27 @@
 
 <p>두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.</p>
 
-### 입력 
+### 입력
 
  <p>첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)</p>
 
-### 출력 
+### 출력
 
  <p>첫째 줄에 A-B를 출력한다.</p>
 
 ---
 
 ### 사용 언어
-* python 3
+
+- python 3
 
 ### 제출
+
 ```python
 A, B = map(int, input().split())
 print(A - B)
 ```
 
-### 배운 내용
-- [A+B 와 동일](https://github.com/Juaa6o6/problem-solving/tree/main/%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)
+### 메모
+
+- [A+B](https://github.com/Juaa6o6/problem-solving/tree/main/%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)
