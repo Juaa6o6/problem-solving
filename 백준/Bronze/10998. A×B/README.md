@@ -1,6 +1,6 @@
-# [Bronze V] A×B - 10998 
+# [Bronze V] A×B - 10998
 
-[문제 링크](https://www.acmicpc.net/problem/10998) 
+[문제 링크](https://www.acmicpc.net/problem/10998)
 
 ### 성능 요약
 
@@ -18,11 +18,27 @@
 
 <p>두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.</p>
 
-### 입력 
+### 입력
 
  <p>첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)</p>
 
-### 출력 
+### 출력
 
  <p>첫째 줄에 A×B를 출력한다.</p>
 
+---
+
+### 사용 언어
+
+- python 3
+
+### 제출
+
+```python
+a, b = map(int, input().split())
+print(a*b)
+```
+
+### 메모
+
+- [A+B 참고](https://github.com/Juaa6o6/problem-solving/tree/main/%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)

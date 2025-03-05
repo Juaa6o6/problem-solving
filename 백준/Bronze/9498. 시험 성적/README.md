@@ -49,7 +49,7 @@ else :
     print("F")
 ```
 
-### 배운 내용
+### 메모
 
 - if, elif, else 문
 

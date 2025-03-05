@@ -41,4 +41,4 @@ print(A - B)
 
 ### 메모
 
-- [A+B](https://github.com/Juaa6o6/problem-solving/tree/main/%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)
+- [A+B 참고](https://github.com/Juaa6o6/problem-solving/tree/main/%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)
