@@ -39,7 +39,7 @@
 ```python
 n = int(input())
 a = 1
-for i in range(1, n+1) :
+for i in range(1, n+1) :  # n+1이어야 하는 이유 -> a = 1
     a *= i  # (a = 1) * 1 * 2 * 3 * 4 * 5
 print(a)
 ```
