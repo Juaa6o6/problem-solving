@@ -72,8 +72,9 @@ while True :
 
 ### 메모
 
-- 반복해야 할 횟수가 정해져 있지 않음 <br>
+- 반복해야 할 횟수가 주어지지 않음 <br>
   -> 종결 조건이 주어짐(입력 마지막 0 두 개)
+
 - while문
 
   ```python
@@ -85,11 +86,34 @@ while True :
   - 조건식의 값이 참(True)일 동안 실행할 코드를 반복하고,<br>
     조건식의 값이 거짓(False)이 될 때 반복을 종료하고 빠져나감
 
-  - break : 실행을 중단하고 반복문을 빠져나옴
-  - continue :
-
-    - for 변수 in 객체(문자열, 리스트, 튜플, 딕셔너리)
-    - for 변수 in range(정수)
+  - break : 즉시 반복을 중단하고 반복문을 빠져나옴
+    - 다중 반복문의 경우 전부다 나오는게 아닌 가까운 반복문 에서만 나옴
+    - e.g., 특정 조건을 만족했을 때 반복을 종료하고자 할 때 사용
+      ```python
+      n = 0
+      while n < 5:
+          n += 1
+          if n == 3:
+              break  # n이 3이 되면 반복을 종료
+          print(n)
+      >>>
+      1
+      2
+      ```
+  - continue : 현재 반복의 나머지 코드를 건너뛰고 다음 반복으로 넘어감
+    - e.g., 반복문 내에서 조건부 실행을 통해 특정 경우를 건너뛰어야 할 때 사용
+      ```python
+      n = 0
+      while n < 6:
+      n += 1
+      if n % 2 == 0:
+          continue  # 짝수일 때 아래 코드를 건너뛰고 다음 반복 진행
+      print(n)      # 홀수만 출력
+      >>>
+      1
+      3
+      5
+      ```
 
 <br>
 
@@ -98,8 +122,10 @@ while True :
 ### 다른 답
 
 ```python
-[print(r) for r in [sum(map(int, input().split())) for _ in range(int(input()))]]
-
-# for _ in range(int(input())):
-#     print(sum(map(int, input().split())))
+import sys
+while True :
+    a,b=map(int,sys.stdin.readline().split())
+    if a==0 and b==0 :
+        break
+    print(a+b)
 ```
