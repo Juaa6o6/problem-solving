@@ -36,7 +36,6 @@
 3 4
 9 8
 5 2
-0 0
 ```
 
 ### 예제 출력
@@ -70,23 +69,37 @@ while True:
 
 ### 메모
 
-- input을 여러번 받으면 for문 안에 넣어서 반복 실행하면 됨
-- for문
+- EOF Error 발생!
 
-  ```python
-  for 변수 in iterable :
-    실행할 코드
-  ```
+- EOF Error
 
-  - 반복문
-    - 반복해야 할 횟수, 반복할 대상이 정해져 있을 때 주로 사용
-  - iterable(이터러블) : 반복 가능한 객체
-  - 변수 : iterable 에서 꺼내온 첫 인덱스 값부터 마지막 인덱스 값까지 차례대로 정의됨
-  - 실행할 코드 : for문이 반복될 때마다 실행할 코드 블록
-  - 2가지 형식
+  - End Of File Error의 약자
+  - 입력 함수(input() 등)가 예상한 데이터를 받지 못하고 파일 끝(EOF: End Of File)에 도달했을 때 발생하는 에러
 
-    - for 변수 in 객체(문자열, 리스트, 튜플, 딕셔너리)
-    - for 변수 in range(정수)
+  - 발생 이유
+
+    - 입력이 없는 경우
+    - 터미널에서 입력 없이 종료한 경우 input()이 더 이상 데이터를 받을 수 없어서 발생
+
+  - 해결 방법
+    - 예외 처리 (try-except)
+    - sys.stdin.readline() <br>
+      (입력이 없으면 빈 문자열("")을 반환하기 때문에, EOFError가 발생하지 않음)
+
+- 예외(Exception)
+
+  - 프로그램 실행 중에 발생하는 예상하지 못한 오류를 의미
+  - try-except 기본 구조
+
+    ```python
+    try:
+      # 예외가 발생할 가능성이 있는 코드
+    except 예외타입:
+      # 예외 발생 시 실행할 코드
+      # 예외타입 작성 X -> 모두 처리
+    ```
+
+  - 발생하는 예외마다 처리를 해줄 수 있음
 
 <br>
 
@@ -95,8 +108,12 @@ while True:
 ### 다른 답
 
 ```python
-[print(r) for r in [sum(map(int, input().split())) for _ in range(int(input()))]]
-
-# for _ in range(int(input())):
-#     print(sum(map(int, input().split())))
+import sys
+while True:
+    try:
+        a, b = sys.stdin.readline().rstrip().split()
+    except:
+        break
+    else:
+        print(int(a) + int(b))
 ```
