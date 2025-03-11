@@ -1,7 +1,6 @@
-n, x = map(int, input().split())
-a = list(map(int, input().split()))
+import sys
 
-for i in range(n) :
-    if a[i] >= x :
-        continue
-    print(a[i], end = " ")
+N, X = map(int, sys.stdin.readline().split())
+for a in map(int, sys.stdin.readline().split()):
+    if a < X:
+        sys.stdout.write(f'{a} ')
