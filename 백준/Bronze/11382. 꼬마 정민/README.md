@@ -1,6 +1,6 @@
-# [Bronze V] 꼬마 정민 - 11382 
+# [Bronze V] 꼬마 정민 - 11382
 
-[문제 링크](https://www.acmicpc.net/problem/11382) 
+[문제 링크](https://www.acmicpc.net/problem/11382)
 
 ### 성능 요약
 
@@ -18,11 +18,35 @@
 
 <p>꼬마 정민이는 이제 A + B 정도는 쉽게 계산할 수 있다. 이제 A + B + C를 계산할 차례이다!</p>
 
-### 입력 
+### 입력
 
  <p>첫 번째 줄에 A, B, C (1 ≤ A, B, C ≤ 10<sup>12</sup>)이 공백을 사이에 두고 주어진다.</p>
 
-### 출력 
+### 출력
 
  <p>A+B+C의 값을 출력한다.</p>
 
+<br>
+
+---
+
+### 사용 언어
+
+- python 3
+
+### 제출
+
+```python
+a, b, c = map(int, input().split())
+print(a+b+c)
+```
+
+<br>
+
+---
+
+### 다른 답
+
+```python
+print(sum(map(int, input().split())))
+```
