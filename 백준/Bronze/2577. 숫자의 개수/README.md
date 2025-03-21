@@ -1,6 +1,6 @@
-# [Bronze II] 숫자의 개수 - 2577 
+# [Bronze II] 숫자의 개수 - 2577
 
-[문제 링크](https://www.acmicpc.net/problem/2577) 
+[문제 링크](https://www.acmicpc.net/problem/2577)
 
 ### 성능 요약
 
@@ -20,11 +20,30 @@
 
 <p>예를 들어 A = 150, B = 266, C = 427 이라면 A × B × C = 150 × 266 × 427 = 17037300 이 되고, 계산한 결과 17037300 에는 0이 3번, 1이 1번, 3이 2번, 7이 2번 쓰였다.</p>
 
-### 입력 
+### 입력
 
  <p>첫째 줄에 A, 둘째 줄에 B, 셋째 줄에 C가 주어진다. A, B, C는 모두 100보다 크거나 같고, 1,000보다 작은 자연수이다.</p>
 
-### 출력 
+### 출력
 
  <p>첫째 줄에는 A × B × C의 결과에 0 이 몇 번 쓰였는지 출력한다. 마찬가지로 둘째 줄부터 열 번째 줄까지 A × B × C의 결과에 1부터 9까지의 숫자가 각각 몇 번 쓰였는지 차례로 한 줄에 하나씩 출력한다.</p>
 
+### 다른 답
+
+```python
+print(*map(str(eval('int(input())*'*3+'1')).count,'0123456789'))
+```
+
+```python
+a = int(input())
+b = int(input())
+c = int(input())
+product = int(a) * int(b) * int(c)
+
+counter = [0] * 10
+for digit in str(product):
+    counter[int(digit)] += 1
+
+for count in counter:
+    print(count)
+```
