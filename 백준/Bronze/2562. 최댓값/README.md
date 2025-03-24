@@ -1,6 +1,6 @@
-# [Bronze III] 최댓값 - 2562 
+# [Bronze III] 최댓값 - 2562
 
-[문제 링크](https://www.acmicpc.net/problem/2562) 
+[문제 링크](https://www.acmicpc.net/problem/2562)
 
 ### 성능 요약
 
@@ -24,11 +24,30 @@
 
 <p>이 주어지면, 이들 중 최댓값은 85이고, 이 값은 8번째 수이다.</p>
 
-### 입력 
+### 입력
 
  <p>첫째 줄부터 아홉 번째 줄까지 한 줄에 하나의 자연수가 주어진다. 주어지는 자연수는 100 보다 작다.</p>
 
-### 출력 
+### 출력
 
  <p>첫째 줄에 최댓값을 출력하고, 둘째 줄에 최댓값이 몇 번째 수인지를 출력한다.</p>
 
+### 다른 답
+
+```python
+print(*max(zip(map(int,open(0)),range(1,10))))
+```
+
+```python
+max_ = int(input())
+max_i = 1
+
+for i in range(2, 10):
+    v = int(input())
+
+    if v > max_:
+        max_ = v
+        max_i = i
+
+print(max_, max_i, sep='\n')
+```
