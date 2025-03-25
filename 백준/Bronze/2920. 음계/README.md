@@ -1,6 +1,6 @@
-# [Bronze II] 음계 - 2920 
+# [Bronze II] 음계 - 2920
 
-[문제 링크](https://www.acmicpc.net/problem/2920) 
+[문제 링크](https://www.acmicpc.net/problem/2920)
 
 ### 성능 요약
 
@@ -22,11 +22,16 @@
 
 <p>연주한 순서가 주어졌을 때, 이것이 ascending인지, descending인지, 아니면 mixed인지 판별하는 프로그램을 작성하시오.</p>
 
-### 입력 
+### 입력
 
  <p>첫째 줄에 8개 숫자가 주어진다. 이 숫자는 문제 설명에서 설명한 음이며, 1부터 8까지 숫자가 한 번씩 등장한다.</p>
 
-### 출력 
+### 출력
 
  <p>첫째 줄에 ascending, descending, mixed 중 하나를 출력한다.</p>
 
+### 다른 답
+
+```python
+print({"2345678":"ascending","7654321":"descending"}.get(input()[2::2],"mixed"))
+```
