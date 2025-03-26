@@ -1,13 +1,14 @@
+import sys
+
 for _ in range(int(input())):
-    ox = input()
-    box = 'O'*len(ox)
-    s_box = []
+    ox = sys.stdin.readline().rstrip()
     score = 0
-    for i in range(len(ox)):
-        if ox[i] == box[i]:
-            score += 1
-            s_box.append(score)
-        else:
-            score = 0
-            s_box.append(score)
-    print(sum(s_box))
+    sum_sore = 0
+    for i in ox:
+        if i == 'X':
+            sum_sore = 0
+            continue
+        sum_sore += 1
+        score += sum_sore
+
+    sys.stdout.write(f'{score}\n')
