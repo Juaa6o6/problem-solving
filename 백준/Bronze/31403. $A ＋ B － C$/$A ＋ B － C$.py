@@ -1,6 +1,3 @@
-import sys
-
-a, b, c = map(int, sys.stdin.read().split())
-
-print(a+b-c)
-print(int(str(a)+str(b))-c)
+a, b, c = input(),input(), int(input())
+print(int(a)+int(b)-c)
+print(int(a+b)-c)
