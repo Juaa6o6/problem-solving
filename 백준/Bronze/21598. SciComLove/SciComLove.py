@@ -1,2 +1,2 @@
 n = int(input())
-print("SciComLove" * n)
+print("SciComLove\n" * n)
