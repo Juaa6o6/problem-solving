@@ -75,3 +75,31 @@
 
  <p>입력으로 주어진 단어가 몇 개의 크로아티아 알파벳으로 이루어져 있는지 출력한다.</p>
 
+---
+
+### 다른 풀이법
+```python
+croatia = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+
+word = input()
+
+for i in croatia :
+    word = word.replace(i, '*')  
+
+print(len(word))
+
+```
+
+### 메모
+
+1. **`replace` 함수란?**
+   
+   - 문자열에서 특정 문자를 찾아 다른 문자로 바꿔는 파이썬 내장 함수
+  
+   - 사용법: **`문자열.replace(찾을값, 바꿀값)`**
+   - 특징: 문자열 내 모든 찾을값을 바꿀값으로 변경함
+   - 예시
+		```python
+		text = "Hello World"
+		new_text = text.replace("Hello", "Hi") 
+		# 결과: "Hi World"
