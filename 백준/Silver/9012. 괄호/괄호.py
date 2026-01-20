@@ -2,10 +2,10 @@ T = int(input())
 
 for _ in range(T):
     stack = []
-    ps = input().strip()
+    chars = input().strip()
     is_vps = True
 
-    for char in ps:
+    for char in chars:
         if char == '(':
             stack.append(char)
         else:
