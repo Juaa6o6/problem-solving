@@ -17,10 +17,10 @@ for _ in range(t):
     while True:
         now_idx, now_v = q.pop(0)
         if now_v == sorted_paper[cnt]:
+            cnt += 1
             if now_idx == m:
                 print(cnt+1)
                 break
-            else:
-                cnt += 1
+                
         else:
             q.append((now_idx, now_v))

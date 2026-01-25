@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 32412 KB, 시간: 32 ms
+메모리: 32412 KB, 시간: 36 ms
 
 ### 분류
 
@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2026년 1월 25일 22:34:03
+2026년 1월 25일 16:29:37
 
 ### 문제 설명
 
@@ -37,3 +37,58 @@
 
  <p>각 테스트 케이스에 대해 문서가 몇 번째로 인쇄되는지 출력한다.</p>
 
+
+---
+
+### 다른 풀이법
+```python
+import sys
+from collections import deque
+
+input = sys.stdin.readline
+
+t = int(input())
+
+for _ in range(t):
+    n, m = map(int, input().split())
+    paper = list(map(int, input().split()))
+
+    q = deque([(v, idx) for idx, v in enumerate(paper)])
+    sorted_paper = sorted(paper, reverse=True)
+    
+    cnt = 0
+
+    while q:
+        now_val, now_idx = q.popleft()
+        
+        if now_val == sorted_paper[cnt]:
+            cnt += 1
+
+            if now_idx == m:
+                print(cnt)
+                break
+        else:
+            q.append((now_val, now_idx))
+```
+
+### 메모
+
+#### 성능 최적화의 진실 (List vs Deque)
+
+* **이론:** 리스트의 `pop(0)`은 $O(N)$, 덱(Deque)의 `popleft()`는 $O(1)$이므로 덱이 압도적으로 빠름.
+* **실전 (이 문제의 특수성):**
+  * 이 문제의 $N$ 은 최대 100으로 매우 작음.
+* **List:** 가볍고 준비 과정이 없음 → 소규모 데이터에서 매우 빠름.
+* **Deque:** 모듈 `import` 및 객체 생성 등 **초기 비용(Overhead)** 발생 → $N$이 작을 땐 오히려 느릴 수 있음.
+
+
+* **결론:**
+  * 이 작을 때(약 1,000 이하): **List** 사용이 효율적.
+  * 이 클 때(수만~수십만): **Deque** 사용이 필수적.
+
+
+
+#### 코드 테크닉
+
+* **`max()` 호출 줄이기:** 반복문 안에서 매번 `max()`를 돌리면 느려짐. 중요도만 따로 뽑아 **미리 내림차순 정렬**(`sorted`)해두고 인덱스로 접근하면 빠름.
+* **`enumerate` 활용:** `0`, `1` 마킹 대신 `(중요도, 초기인덱스)`를 저장하면 `if current_idx == m:` 한 줄로 깔끔하게 타겟 문서를 찾을 수 있음.
