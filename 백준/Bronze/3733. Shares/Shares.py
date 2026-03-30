@@ -1,6 +1,6 @@
-while True:
-    try:
-        n, s = map(int, input().split())
-        print(s//(n+1))
-    except EOFError:
-        break
+import sys
+
+for line in sys.stdin:
+    n, s = map(int, line.strip().split())
+    n += 1
+    print(s//n)
