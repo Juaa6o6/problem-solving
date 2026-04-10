@@ -1,9 +1,9 @@
-word = input()
-wn = int(len(word))
-num = 0
-for w in range(wn):
-    asc = str(ord(word[w]))
-    for i in range(len(asc)):
-        num += int(asc[i])
-    print(f'{word[w]*num}')
-    num = 0
+get=input("")
+mylen=int(len(get))
+add=0
+for i in range(mylen):
+    num=str(ord(get[i]))
+    for j in range(len(num)):
+        add=add+int(num[j])
+    print(get[i]*add)
+    add=0
