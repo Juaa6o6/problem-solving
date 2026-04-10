@@ -1,9 +1,14 @@
-word = input()
+def num_sum(w):
+    num = 0
+    for i in range(len(w)):
+        num += int(asc[i])
+    return num
+
+
+word = input("")
 wn = int(len(word))
-num = 0
+
 for w in range(wn):
     asc = str(ord(word[w]))
-    for i in range(len(asc)):
-        num += int(asc[i])
-    print(word[w]*num)
-    num = 0
+    hap = num_sum(asc)
+    print(word[w]*hap)
