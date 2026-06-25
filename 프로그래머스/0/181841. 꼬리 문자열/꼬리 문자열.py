@@ -1,6 +1,2 @@
 def solution(str_list, ex):
-    ans = ""
-    for sl in str_list:
-        if not ex in sl:
-            ans += sl
-    return ans
+    return ''.join(filter(lambda x: ex not in x, str_list))
