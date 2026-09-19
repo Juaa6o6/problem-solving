@@ -1,6 +1,2 @@
 def solution(numbers):
-    answer = []
-    for i in numbers:
-        res = i * 2
-        answer.append(res)
-    return answer
+    return [num * 2 for num in numbers]
