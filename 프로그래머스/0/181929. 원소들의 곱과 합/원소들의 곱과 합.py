@@ -5,7 +5,4 @@ def solution(num_list):
         hap += num
         gop *= num
     
-    if gop < hap**2:
-        return 1
-    else:
-        return 0
+    return 1 if gop < hap**2 else 0
