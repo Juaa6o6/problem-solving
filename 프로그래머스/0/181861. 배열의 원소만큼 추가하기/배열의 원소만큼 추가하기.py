@@ -1,7 +1,2 @@
 def solution(arr):
-    asw = []
-    for a in arr:
-        for i in range(a):
-            asw.append(a)
-    
-    return asw
+    return [ a for a in arr for _ in range(a)]
