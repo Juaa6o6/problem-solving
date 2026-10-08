@@ -1,6 +1,9 @@
 def solution(n):
-    i = 2
+    n -= 1
+    s = int(n ** 0.5)
     
-    while (n-1)%i: i += 1
-
-    return i
+    for i in range(2, s+1):
+        if n % i == 0:
+            return i
+        
+    return n
