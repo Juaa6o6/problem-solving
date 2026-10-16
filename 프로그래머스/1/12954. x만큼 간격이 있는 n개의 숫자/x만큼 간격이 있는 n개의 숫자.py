@@ -1,7 +1,2 @@
 def solution(x, n):
-    ans = []
-    num = x
-    for _ in range(n):
-        ans.append(num)
-        num += x
-    return ans
+    return [ x * i + x for i in range(n)]
