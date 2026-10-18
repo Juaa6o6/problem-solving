@@ -1,3 +1,3 @@
 def solution(absolutes, signs):
     
-    return sum(x if signs[i] else -x for i, x in enumerate(absolutes))
+    return sum(a if s else -a for a, s in zip(absolutes, signs))
