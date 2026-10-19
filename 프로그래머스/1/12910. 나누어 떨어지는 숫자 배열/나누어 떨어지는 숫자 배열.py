@@ -1,12 +1,6 @@
 def solution(arr, divisor):
-    cnt = 0
-    lst = []
-    for a in arr:
-        if a % divisor == 0:
-            lst.append(a)
-            cnt += 1
-    
-    if cnt != 0:
+    lst = ([x for x in arr if x % divisor == 0])
+    if len(lst) != 0:
         return sorted(lst)
     else:
         return [-1]
