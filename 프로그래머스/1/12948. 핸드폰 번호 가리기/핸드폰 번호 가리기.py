@@ -1,2 +1,2 @@
 def solution(lst):
-    return '*'*len(lst[:-4])+''.join(lst[-4:])
+    return '*'*len(lst[:-4])+lst[-4:]
