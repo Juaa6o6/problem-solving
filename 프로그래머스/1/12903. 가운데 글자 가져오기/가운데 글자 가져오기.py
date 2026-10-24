@@ -1,2 +1,3 @@
 def solution(s):
-    return s[len(s)//2-1:len(s)//2+1] if len(s) % 2 == 0 else s[len(s)//2]
+    lth = len(s)
+    return s[lth//2-1 : lth//2+1] if lth % 2 == 0 else s[lth//2]
