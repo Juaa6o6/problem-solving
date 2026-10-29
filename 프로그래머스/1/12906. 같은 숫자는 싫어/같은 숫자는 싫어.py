@@ -3,7 +3,6 @@ def solution(arr):
     for a in arr:
         if ans[-1:] == [a]:
             continue
-        else:
-            ans.append(a)
+        ans.append(a)
             
     return ans
