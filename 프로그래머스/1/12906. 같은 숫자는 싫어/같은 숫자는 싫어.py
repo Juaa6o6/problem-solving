@@ -2,7 +2,7 @@ def solution(arr):
     ans = []
     for a in arr:
         if ans[-1:] == [a]:
-            pass
+            continue
         else:
             ans.append(a)
             
