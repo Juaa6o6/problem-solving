@@ -4,5 +4,5 @@ def solution(n, m):
     while b:
         a, b = b, a % b
         
-    return [a, (n*m)//a ]
+    return [a, (n*m)//a]
         
