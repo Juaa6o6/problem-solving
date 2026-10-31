@@ -1,9 +1,10 @@
 def solution(t, p):
     ans = 0
-    lp = len(p)
+    lp, p = len(p), int(p)
+
     for i in range(len(t)-lp+1):
         pt = t[i:i+lp]
-        if pt <= p:
+        if int(pt) <= p:
             ans += 1
             
     return ans
