@@ -1,5 +1,5 @@
 def solution(food):
     ans = ''
-    for i in range(1, len(food)):
-        ans += (food[i] // 2) * str(i)
+    for i, f in enumerate(food[1:]):
+        ans += (f // 2) * str(i+1)
     return ans + '0' + ans[::-1]
