@@ -1,6 +1,6 @@
 def solution(a, b, n):
-    answer = 0
+    ans = 0
     while n >= a:
-        answer += b
-        n = n - a + b
-    return answer
+        ans += n // a * b
+        n = (n // a) * b + (n % a)
+    return ans
