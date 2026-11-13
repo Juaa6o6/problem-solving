@@ -1,14 +1,10 @@
 def solution(k, score):
     ans = []
-    win = []
+    q = []
     for s in score:
-        if len(win) == k:
-            if win[-1] < s:
-                win.pop()
-                win.append(s)
-        else:
-            win.append(s)
+        q.append(s)
+        if len(q) > k:
+            q.remove(min(q))
 
-        win.sort(reverse=True)
-        ans.append(min(win))
+        ans.append(min(q))
     return ans
