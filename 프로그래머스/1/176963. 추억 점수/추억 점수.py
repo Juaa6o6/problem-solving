@@ -1,9 +1,2 @@
 def solution(name, yearning, photo):
-    ans = []
-    for p in photo:
-        re = []
-        for i in range(len(name)):
-            if name[i] in p:
-                re.append(yearning[i])
-        ans.append(sum(re))
-    return ans
+    return [sum(yearning[name.index(i)] for i in p if i in name) for p in photo]
