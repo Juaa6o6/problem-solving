@@ -1,5 +1,4 @@
 def solution(cards1, cards2, goal):
-    answer = "Yes"
     i, j = 0, 0
     for go in goal:
         if i < len(cards1) and go == cards1[i]:
@@ -8,4 +7,4 @@ def solution(cards1, cards2, goal):
             j += 1
         else:
             return "No"
-    return answer
+    return "Yes"
