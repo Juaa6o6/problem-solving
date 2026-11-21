@@ -1,19 +1,18 @@
 def solution(number, limit, power):
-    re = []
+    result = 0
     for num in range(1, number + 1):
-        div = []
-        total = 0
+        cnt = 0
         for n in range(1, int(num ** 0.5) + 1):
             if num % n == 0:
                 q = num // n
                 if n != q:
-                    div.extend([n, q])
+                    cnt += 2
                 else:
-                    div.append(n)
+                    cnt += 1
 
-        if len(div) > limit:
-            total = power
+        if cnt > limit:
+            result += power
         else:
-            total = len(div)
-        re += [total]
-    return sum(re)
+            result += cnt
+            
+    return result
