@@ -12,4 +12,4 @@ def solution(ans):
         if ans[i] == m3[i]:
             scores[3] += 1
             
-    return [i for i, v in enumerate(scores) if max(scores) == v]
+    return [i for i in range(1, 4) if max(scores[1:]) == scores[i]]
