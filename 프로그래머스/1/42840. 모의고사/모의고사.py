@@ -1,15 +1,17 @@
 def solution(ans):
-    m1 = [1, 2, 3, 4, 5] * len(ans)
-    m2 = [2, 1, 2, 3, 2, 4, 2, 5] * len(ans)
-    m3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5] * len(ans)
-    scores = [0] * 4
     
-    for i in range(len(ans)):
-        if ans[i] == m1[i]:
-            scores[1] += 1
-        if ans[i] == m2[i]:
-            scores[2] += 1        
-        if ans[i] == m3[i]:
-            scores[3] += 1
+    patterns = [
+        [1, 2, 3, 4, 5],
+        [2, 1, 2, 3, 2, 4, 2, 5],
+        [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    ]
+    scores = [0] * 3
+    
+    for i, a in enumerate(ans):
+        for j, p in enumerate(patterns):
+            if a == p[i%len(p)]:
+                scores[j] += 1
+                
+    best = max(scores)
             
-    return [i for i in range(1, 4) if max(scores[1:]) == scores[i]]
+    return [i + 1 for i, s in enumerate(scores) if best == s]
