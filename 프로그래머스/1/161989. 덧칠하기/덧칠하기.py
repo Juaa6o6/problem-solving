@@ -1,9 +1,9 @@
-def solution(n, m, s):
-    ch = 0
+def solution(n, m, section):
+    p = 0
     cnt = 0
-    for i in range(len(s)):
-        if ch < s[i]:
-            ch = s[i] + m - 1
+    for s in section:
+        if p < s:
+            p = s + m - 1
             cnt += 1
 
     return cnt
